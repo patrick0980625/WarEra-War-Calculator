@@ -9,24 +9,29 @@
 </head>
 <body>
 <form id="calculator">
-  <h1>War Calculator</h1>
+  <h1 data-i18n="title">War Calculator</h1>
+  
+  <div style="text-align: right; margin-bottom: 10px;">
+    <span style="cursor:pointer" onclick="changeLang('zh')">繁中</span> |
+    <span style="cursor:pointer" onclick="changeLang('en')">EN</span>
+  </div>
   
   <div class="input-group">
-    <label for="A">Your Side Score</label>
+    <label for="A" data-i18n="labelA">Your Score</label>
     <input id="A" max="305" min="0" type="number" value="0">
   </div>
   
   <div class="input-group">
-    <label for="B">Opponent's Side Score</label>
+    <label for="B" data-i18n="labelB">Opponent's Score</label>
     <input id="B" max="305" min="0" type="number" value="0">
   </div>
   
-  <input id="submit" type="submit" value="Calculate Timing">
+  <input id="submit" type="submit" value="Calculate Timing" data-i18n="btn">
   
   <div id="result-div">
-    <p>Required time:</p>
+    <p data-i18n="resText">Required time:</p>
     <span id="result">0</span>
-    <p style="font-size: 0.8rem; margin-top: 5px;">minutes</p>
+    <p style="font-size: 0.8rem; margin-top: 5px;" data-i18n="unit">minutes</p>
   </div>
 </form>
 </body>

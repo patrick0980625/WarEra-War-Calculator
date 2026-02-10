@@ -8,7 +8,7 @@
 }
 
 * {
-    box-sizing: border-box; /* 確保 padding 不會撐破寬度 */
+    box-sizing: border-box;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px; /* 給手機邊緣留點空間 */
+    padding: 20px;
 }
 
 #calculator {
@@ -51,19 +51,17 @@ label {
     font-size: 0.95rem;
 }
 
-/* 針對手機優化輸入框 */
 input[type="number"] {
     width: 100%;
-    padding: 14px; /* 加大觸控區域 */
+    padding: 14px;
     border: 2px solid #edf2f7;
     border-radius: 12px;
-    font-size: 1.1rem; /* 至少 16px 防止 iOS 自動放大畫面 */
+    font-size: 1.1rem;
     background-color: #f8fafc;
     transition: all 0.2s ease;
-    -moz-appearance: textfield; /* 隱藏火狐箭頭 */
+    -moz-appearance: textfield;
 }
 
-/* 隱藏 Chrome/Safari 箭頭讓畫面更乾淨 */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
