@@ -35,6 +35,14 @@ window.addEventListener('DOMContentLoaded', () => {
   const A = document.getElementById("A");
   const B = document.getElementById("B");
   const result = document.getElementById("result");
+  const swapBtn = document.getElementById("swap-btn");
+
+  if (swapBtn) {
+    swapBtn.addEventListener("click", () => {
+      [A.value, B.value] = [B.value, A.value];
+      swapBtn.style.transform = swapBtn.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
+    });
+  }
 
   if (form) {
     form.addEventListener("submit", (e) => {
